@@ -32,20 +32,24 @@ dg_nhap int,
 sl_nhap int,
 ma_vtu int,
 so_pn int,
- primary key (ma_vtu, so_pn),
+primary key (ma_vtu, so_pn),
 foreign key (ma_vtu) references vat_tu (ma_vtu),
 foreign key (so_pn) references phieu_nhap (so_pn)
 );
 
-create table dondh (
-so_dh int not null primary key,
-ngay_dh date
-);
+
 
 create table nhacc (
 ma_nacc int not null primary key,
 ten_ncc varchar (100),
 dia_chi varchar (100)
+);
+
+create table dondh (
+so_dh int not null primary key,
+ngay_dh date,
+ma_nacc int,
+foreign key (ma_nacc) references nhacc (ma_nacc)
 );
 
 create table chi_tiet_don_dat_hang (
