@@ -128,7 +128,6 @@ foreign key (ma_dich_vu_di_kem) references dich_vu_di_kem (ma_dich_vu_di_kem)
 );
 
 
- insert into vi_tri (ten_vi_tri) values ("giam doc"), ("pho giam doc");
 
 
 
