@@ -18,6 +18,11 @@ join product p on p.p_id = od.p_id;
 
 select c.* from `order` o right join customer c on c.c_id = o.c_id where o.c_id is null;
 
+select o.o_id, o.o_date, sum(od.od_qty * p.p_price) as "giá tiền hoá đơn" 
+from `order` o inner join order_detail od on o.o_id = od.o_id
+inner join product p on p.p_id = od.p_id  group by o.o_id
+
+
 
 
 

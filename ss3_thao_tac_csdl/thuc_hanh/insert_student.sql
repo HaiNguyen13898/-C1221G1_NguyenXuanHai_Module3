@@ -39,18 +39,23 @@ foreign key (id_sub) references `subject` (id_sub),
 foreign key (id_student) references student (id_student)
 );
 
-insert into class (name_class, start_date, `status`) values ("A1", "2008-12-20", "1"), 
-("A2", "2008-12-22", "1"), ("B3", current_date, "0");
+insert into class (name_class, start_date, `status`) values ("A1", "2008-12-20", 1), 
+("A2", "2008-12-22", 1), ("B3", current_date, 0);
 
-insert into student (name_student, address, phone,`status`, id_class) values ("Hung", "Ha Noi", 0912113113, "1", 1),
- ("Manh", "Ho Chi Minh", 0123123123, "0", 2);
+insert into student (name_student, address, phone,`status`, id_class) values ("Hung", "Ha Noi", 0912113113, 1, 1),
+ ("Manh", "Ho Chi Minh", 0123123123, 0, 2);
  
-insert into student (name_student, address, `status`, id_class) values ("Hoa", "Hai Phong", "1", 1);
+insert into student (name_student, address, `status`, id_class) values ("Hoa", "Hai Phong", 1, 1);
  
 insert into `subject` (name_sub, credit, `status`) values ( "CF", 5, "1"), ( "C", 6, "1"), 
  ( "HDJ", 5, "1"), ( "RDBMS", 10, "1");
  
-insert into mark (id_sub, id_student, mark, exam_times) values (1, 1, 8, 1), (1, 2, 10, 2), (2, 1, 12, 1);
+insert into mark (id_sub, id_student, mark, exam_times) values (1, 1, 8, 1), (1, 2, 10, 2), 
+(2, 1, 12, 1), (3, 4, 10, 1), (4, 5, 9, 2), (3, 6, 7, 1), (2, 7, 8, 1), (4, 8, 6,1);
+
+insert into student (name_student, address, `status`, id_class) values ("Tuan", "Yen Bai", 1, 3),
+("Toan", "Gia Lai", 0, 2), ("Hau", "Quy Nhon", 0, 3), ("Khoa", "Hue", 1, 2), ("Dai", "Ca Mau", 1, 3);
+
 
 alter table student modify `status` bit;
 alter table class modify `status` bit;
