@@ -34,9 +34,9 @@ INSERT INTO `resort_furama`.`kieu_thue` (`ma_kieu_thue`, `ten_kieu_thue`) VALUES
 INSERT INTO `resort_furama`.`kieu_thue` (`ma_kieu_thue`, `ten_kieu_thue`) VALUES ('3', 'day');
 INSERT INTO `resort_furama`.`kieu_thue` (`ma_kieu_thue`, `ten_kieu_thue`) VALUES ('4', 'hour');
 
-INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich`) VALUES ('1', 'Villa');
-INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich`) VALUES ('2', 'House');
-INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich`) VALUES ('3', 'Room');
+INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich_vu`) VALUES ('1', 'Villa');
+INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich_vu`) VALUES ('2', 'House');
+INSERT INTO `resort_furama`.`loai_dich_vu` (`ma_loai_dich_vu`, `ten_loai_dich_vu`) VALUES ('3', 'Room');
 
 INSERT INTO `resort_furama`.`dich_vu` (`ma_dich_vu`, `ten_dich_vu`, `dien_tich`, `chi_phi_thue`, `so_nguoi_toi_da`, `tieu_chuan_phong`, `mo_ta_tien_nghi_khac`, `dien_tich_ho_boi`, `so_tang`, `ma_kieu_thue`, `ma_loai_dich_vu`) VALUES (1, 'Villa Beach Front', 25000, 10000000, 10, 'vip', 'Có hồ bơi', 500, 4, 3, 1);
 INSERT INTO `resort_furama`.`dich_vu` (`ma_dich_vu`, `ten_dich_vu`, `dien_tich`, `chi_phi_thue`, `so_nguoi_toi_da`, `tieu_chuan_phong`, `mo_ta_tien_nghi_khac`, `dien_tich_ho_boi`, `so_tang`, `ma_kieu_thue`, `ma_loai_dich_vu`) VALUES (2, 'House Princess 01', 14000,5000000, 7, 'vip', 'Có thêm bếp nướng', null, 3, 2, 2);

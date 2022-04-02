@@ -38,7 +38,7 @@ primary key (ma_loai_khach)
 
 create table loai_dich_vu (
 ma_loai_dich_vu int not null auto_increment,
-ten_loai_dich varchar (45),
+ten_loai_dich_vu varchar (45),
 primary key (ma_loai_dich_vu)
 );
 
