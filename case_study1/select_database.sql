@@ -64,10 +64,24 @@ ifnull(sum(hdct.so_luong), 0) as so_luong_dich_vu_di_kem -- hoặc có thể dù
 from hop_dong hd left join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong  group by hd.ma_hop_dong;
 
 -- task 11 
- select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_kem from dich_vu_di_kem dvdk 
- 
+select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem from dich_vu_di_kem dvdk 
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+join hop_dong hd on hdct.ma_hop_dong = hd.ma_hop_dong
+join khach_hang kh on hd.ma_khach_hang = kh.ma_khach_hang
+join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach
+where  lk.ten_loai_khach = 'Diamond' and ( kh.dia_chi like '%Vinh' or  kh.dia_chi like '%Quảng Ngãi') ;
  
  -- task 12
+select hd.ma_hop_dong, nv.ho_ten as 'ho_ten_nhan_vien', kh.ho_ten as 'ho_ten_khach_hang', 
+kh.so_dien_thoai, dv.ten_dich_vu, sum( hdct.so_luong) as 'So_luong_dich_vu_di_kem', hd.tien_dat_coc
+from nhan_vien nv join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
+left join hop_dong_chi_tiet hdct on  hd.ma_hop_dong = hdct.ma_hop_dong
+left join khach_hang kh on hd.ma_khach_hang = kh.ma_khach_hang
+left join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu group by hd.ma_hop_dong;
+-- where hd.tien_dat_coc and dv.ma_dich_vu in (
+-- select hd.tien_dat_coc from hop_dong 
+-- where hd.ngay_lam_hop_dong between '2020-10-01' and '2021-06-30')
+ 
  
  
  
