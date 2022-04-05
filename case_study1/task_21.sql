@@ -1,1 +1,0 @@
-use resort_furama;

@@ -1,0 +1,15 @@
+ #one-piece,
+ #naruto {
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column;
+ }
+
+div {
+    width: auto;
+}
+
+
+.muc-luc {
+    text-align: center;
+}
