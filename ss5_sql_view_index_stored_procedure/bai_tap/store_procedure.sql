@@ -26,8 +26,8 @@ select * from products_views;
 select * from products;
 
 -- bước 5
-DELIMITER //
 
+DELIMITER //
 CREATE PROCEDURE finAllProducts()
 BEGIN
   SELECT * FROM products;
@@ -60,31 +60,4 @@ call insert_products (123, "Chó", 34000);
 drop procedure insert_products ;
 
 -- không có lệnh sửa, sửa thì dùng drop procedure rồi tạo lại cái mới.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

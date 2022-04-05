@@ -1,3 +1,6 @@
+
+
+use resort_furama;
 -- task 2
   select * from nhan_vien where ho_ten regexp '^[HKT]' and char_length(ho_ten) <= 15; 
 
@@ -55,7 +58,7 @@ group by dv.ma_dich_vu;
  
  -- task 9
  select month(ngay_lam_hop_dong) as  "# thang", count(ma_khach_hang) as so_luong_khach
- from hop_dong where year(ngay_lam_hop_dong) ="2021" 
+ from hop_dong where year(ngay_lam_hop_dong) ='2021'
  group by month(ngay_lam_hop_dong) order by month(ngay_lam_hop_dong);
  
  -- task 10
@@ -95,6 +98,7 @@ join hop_dong hd on hdct.ma_hop_dong = hd.ma_hop_dong group by dvdk.ma_dich_vu_d
 select sum(so_luong) as So_luong_dich_vu_di_kem
 from hop_dong_chi_tiet  group by ma_dich_vu_di_kem
 order by So_luong_dich_vu_di_kem desc limit 1);
+
 
 -- task 14
 select hd.ma_hop_dong, ldv.ten_loai_dich_vu, dvdk.ten_dich_vu_di_kem, count(dvdk.ma_dich_vu_di_kem) as so_lan_su_dung
@@ -194,7 +198,7 @@ join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
 where nv.dia_chi like '%Huế' and hd.ngay_lam_hop_dong = '2021-09-02'
 group by hd.ma_nhan_vien;
 
--- task 22 
+-- task 22 (SAI VỚI YÊU CẦU CỦA ĐỀ)
 set sql_safe_updates = 0;
 update nhan_vien set dia_chi = 'Liên Chiểu' where ma_nhan_vien in
 (select ma_nhan_vien from (select ma_nhan_vien from v_nhan_vien) as x);
