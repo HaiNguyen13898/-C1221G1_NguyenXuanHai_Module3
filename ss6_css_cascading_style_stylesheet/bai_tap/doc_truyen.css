@@ -1,60 +1,66 @@
-    #one-piece,
-    #naruto {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-    body {
-        background: -webkit-linear-gradient(left, #93B874, #C9DCB9);
-        background: -o-linear-gradient(right, #93B874, #C9DCB9);
-        background: -moz-linear-gradient(right, #93B874, #C9DCB9);
-        background: linear-gradient(to right, #93B874, #C9DCB9);
-        background-color: #93B874;
-    }
-a{
+#one-piece,
+#naruto {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+body {
+    background: -webkit-linear-gradient(left, #93B874, #C9DCB9);
+    background: -o-linear-gradient(right, #93B874, #C9DCB9);
+    background: -moz-linear-gradient(right, #93B874, #C9DCB9);
+    background: linear-gradient(to right, #93B874, #C9DCB9);
+    background-color: #93B874;
+}
+
+a {
     text-decoration: none;
 }
-    div {
-        width: auto;
-    }
-    img {
-        max-width: 50%;
-        max-height: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-        animation-name: move;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        position: relative;
 
-    }
-    li{
-        padding: 10px;
-        padding-left: 50px;
-    }
-    .muc-luc {
-        background-color: aquamarine;
-        text-align: center;
-        padding: 15px;
-        font-size: 30px;
-        line-height: 26px;
-    }
+div {
+    width: auto;
+}
 
-    @keyframes move {
-        0% {
-            left: 0px;
-        }
-        50% {
-            left: 150px;
-        }
-        100% {
-            left: 0px;
-        }
-        50% {
-            right: 150px;
-        }
-        0% {
-            right: 150px;
-        }
+img {
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+
+}
+
+li {
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.muc-luc {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+    line-height: 26px;
+}
+
+@keyframes move {
+    0% {
+        left: 0px;
     }
+    50% {
+        left: 150px;
+    }
+    100% {
+        left: 0px;
+    }
+    50% {
+        right: 150px;
+    }
+    0% {
+        right: 150px;
+    }
+}

@@ -192,13 +192,11 @@ from khach_hang;
 
 -- task 21
 create view v_nhan_vien as
-select nv.ma_nhan_vien, nv.ho_ten, count(hd.ma_nhan_vien) as so_lan_lam_hop_dong 
-from nhan_vien nv 
+select * from nhan_vien nv 
 join hop_dong hd on nv.ma_nhan_vien = hd.ma_nhan_vien
-where nv.dia_chi like '%Huế' and hd.ngay_lam_hop_dong = '2021-09-02'
-group by hd.ma_nhan_vien;
+where nv.dia_chi like '%Liên Chiểu' and hd.ngay_lam_hop_dong = '2021-09-02';
 
--- task 22 (SAI VỚI YÊU CẦU CỦA ĐỀ)
+-- task 22 
 set sql_safe_updates = 0;
 update nhan_vien set dia_chi = 'Liên Chiểu' where ma_nhan_vien in
 (select ma_nhan_vien from (select ma_nhan_vien from v_nhan_vien) as x);

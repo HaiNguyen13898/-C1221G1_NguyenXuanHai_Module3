@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+#header {
+    background: aqua;
+    height: 100px;
+    weight: 100%;
+}
+
+#main {
+    background: chocolate;
+    height: 300px;
+    width: 70%;
+    float: left;
+}
+
+#sidebar {
+    background: chartreuse;
+    height: 300px;
+    width: 30%;
+    float: right;
+}
+
+#footer {
+    background: cadetblue;
+    height: 300px;
+    width: 100%;
+    clear: both;
+}
+
+
+
