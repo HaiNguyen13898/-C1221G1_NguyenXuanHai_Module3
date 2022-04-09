@@ -1,6 +1,6 @@
 use  ss2_bai_tap_quan_ly_ban_hang;
 
-insert into customer (c_name, c_age) values ("Minh Quan", 10), ("Ngoc Oanh", 20), ("Hong Ha", 50);
+insert into customer (c_name, c_age) values ('Minh Quan', 10), ("Ngoc Oanh", 20), ("Hong Ha", 50);
 
 insert into `order` (c_id, o_date) values (1, "2006-03-21"), (2, "2006-03-23"), (1, "2006-03-16");
 

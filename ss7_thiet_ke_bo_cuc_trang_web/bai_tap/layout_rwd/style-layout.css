@@ -1,83 +1,91 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-}
 
-nav {
+
+.head {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: darkgrey;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #262626;
-    color: #bfbfbf;
 }
 
-nav > ul {
+ul.head-left {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    width: 50%;
+    justify-content: space-between;
 }
 
-nav > ul > li,
-nav > div > p {
-    padding: 15px 20px;
+li.logo {
+    margin-left: 10px;
 }
 
-.logo {
-    font-size: 20px
+p {
+    margin-right: 10px;
 }
 
-.active {
-    background-color: black;
-    color: white;
-}
-
-.middle-content {
-    display: flex;
-    height: 450px;
-}
-
-.link,
-.ads {
+.left {
     width: 20%;
+    height: 500px;
+    float: left;
+    background-color: coral;
+}
+
+ul.ul-li {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.middle {
+    width: 60%;
+    float: left;
+    height: 500px;
+}
+
+.middle h1, .middle p {
+    margin: 10px 10px;
+}
+
+.right {
+    width: 20%;
+    height: 25%;
+    float: left;
+    height: 500px;
+    background-color: aquamarine;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
-    background-color: #e6e6e6;
+    justify-content: flex-start;
 }
 
-.link > a {
-    padding: 10px 0;
-}
-
-.ads-box {
+.ads {
     padding: 40px 70px;
-    margin-top: 30px;
+    margin: 20px;
     border-radius: 3px;
     background-color: gray;
 }
-.content {
-    width: 60%;
-    padding: 0 20px;
-}
-
-h1,
-h2,
-hr {
-    margin: 20px 0;
-}
 
 .footer {
-    height: 60px;
-    background-color: #262626;
+    background-color: chartreuse;
+    clear: both;
+    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.footer > p {
-    color: white;
+@media screen and (max-width: 756px) {
+    .left {
+        width: 40%;
+    }
+    .middle{
+        width: 30%;
+    }
+
 }
+

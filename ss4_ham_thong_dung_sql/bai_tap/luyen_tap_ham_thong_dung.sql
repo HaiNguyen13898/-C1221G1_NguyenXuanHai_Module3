@@ -1,4 +1,3 @@
-use ss3_thuc_hanh_student;
 
 select s.*, max(credit)  from `subject` s;
 
