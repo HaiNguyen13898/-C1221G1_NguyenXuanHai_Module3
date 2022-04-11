@@ -1,0 +1,58 @@
+button#dropdownMenuButton {
+    background-color: transparent;
+    color: black;
+    border-style: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+
+}
+
+.head-navbar {
+    margin-bottom: 5px;
+}
+
+div#carouselExampleIndicators {
+    width: 50%;
+}
+
+.parent-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("https://hainh2k3.com/wp-content/uploads/2018/11/CSS-Particles.gif");
+}
+
+ul.c-group.f-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+    background-image: url("https://img4.thuthuatphanmem.vn/uploads/2020/07/05/hinh-anh-background-nen-xanh-dai-sao-trang-lap-lanh_034914488.jpg");
+}
+
+li.f-active {
+    text-align: center;
+    width: 20%;
+}
+
+div {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.card-row-2 {
+    margin-top: 20px;
+}
