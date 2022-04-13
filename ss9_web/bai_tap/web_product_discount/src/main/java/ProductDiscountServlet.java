@@ -13,7 +13,6 @@ public class ProductDiscountServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         float productPrice = Float.parseFloat(request.getParameter("product-price"));
         String description = request.getParameter("product-name");
         int productDiscount = Integer.parseInt(request.getParameter("product-discount"));

@@ -5,10 +5,12 @@
   Time: 7:46 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <html>
 <head>
     <title>$Title$</title>
+
 </head>
 <body>
 <form method="post" action="/ProductDiscount">
@@ -20,7 +22,6 @@
     <input type="text" name="product-discount" size="30" placeholder="Tỷ lệ chiết khấu (phần trăm)"><br>
     <input type="submit" id="submit" value="Discount product">
 </form>
-
 
 </body>
 </html>
