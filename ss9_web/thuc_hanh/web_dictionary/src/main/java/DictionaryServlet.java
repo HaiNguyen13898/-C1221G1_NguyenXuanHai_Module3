@@ -15,7 +15,6 @@ public class DictionaryServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         Map<String, String> dictionary = new HashMap<>();
         dictionary.put("hello", "Xin chào");
         dictionary.put("how", "Thế nào");
@@ -26,7 +25,6 @@ public class DictionaryServlet extends HttpServlet {
 
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
-
         String result = dictionary.get(search);
         if(result != null){
             writer.println("Word: " + search);

@@ -5,39 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20b085a1-8243-4cba-ad5d-527967e3647b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/caculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../list_customer_jstl/src/main/java/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../list_customer_jstl/src/main/java/ListCustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../list_customer_jstl/src/main/webapp/listCustomer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/dictionary_jsp/src/main/webapp/dictionary.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/money_jsp/src/main/webapp/converter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/product/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/product/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/product/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/product/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/bai_tap/src/main/webapp/product/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/java/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/java/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh/src/main/webapp/error-404.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/caculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/caculatorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/classes/java/main/ProductDiscountServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/classes/java/main/ProductDiscountServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/libs/product_discount _calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/libs/product_discount _calculator-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/src/main/java/ProductDiscountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/src/main/java/ProductDiscountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/classes/java/main/DictionaryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/classes/java/main/DictionaryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/libs/simple_dictionary-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/libs/simple_dictionary-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/src/main/java/DictionaryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_dictionary/src/main/java/DictionaryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/classes/java/main/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/classes/java/main/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/libs/simple_login-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/libs/simple_login-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/src/main/java/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_login/src/main/java/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/build/libs/money_servlet-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/thuc_hanh/web_money/build/libs/money_servlet-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +97,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss9_web/bai_tap/web_product_discount" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss11_mvc/thuc_hanh" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
@@ -171,6 +198,9 @@
       <option name="presentableId" value="Default" />
       <updated>1649839936006</updated>
       <workItem from="1649839937943" duration="4819000" />
+      <workItem from="1649900491442" duration="345000" />
+      <workItem from="1649901057745" duration="878000" />
+      <workItem from="1650090913321" duration="711000" />
     </task>
     <servers />
   </component>
@@ -187,5 +217,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

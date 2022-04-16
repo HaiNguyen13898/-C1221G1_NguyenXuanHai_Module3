@@ -59,7 +59,5 @@ public class caculatorServlet extends HttpServlet {
             }
 
         }
-
-
     }
 }
