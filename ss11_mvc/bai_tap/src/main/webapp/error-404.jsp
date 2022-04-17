@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Không tìm thấy</h1>
+<h1>NOT FOUND</h1>
 </body>
 </html>

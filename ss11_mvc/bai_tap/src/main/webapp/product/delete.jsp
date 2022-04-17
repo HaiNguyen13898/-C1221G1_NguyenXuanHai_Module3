@@ -17,26 +17,24 @@
 </p>
 <form method="post">
     <h3>Are you sure?</h3>
-    <fieldset>
-        <legend>Product information</legend>
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td>${"product".getNameProduct()}</td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td>${"product".getPriceProduct()}</td>
-            </tr>
-            <tr>
-                <td>Manufacture:</td>
-                <td>${"product".getFacilitiesProduct()}</td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Delete product"></td>
-            </tr>
-        </table>
-    </fieldset>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>${product.getNameProduct()}</td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td>${product.getPriceProduct()}</td>
+        </tr>
+        <tr>
+            <td>Manufacture:</td>
+            <td>${product.getFacilitiesProduct()}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Delete product"></td>
+        </tr>
+    </table>
+
 </form>
 </body>
 </html>

@@ -16,7 +16,12 @@
 <p>
     <a href="/products?action=create"> Create new product </a>
 </p>
+
+<p>
+    <a href="/"></a>
+</p>
 <table border="2">
+
     <tr>
         <td>Name</td>
         <td>Price</td>
@@ -24,14 +29,13 @@
         <td>Edit</td>
         <td>Delete</td>
     </tr>
-
         <c:forEach items='${products}' var="product">
     <tr>
-        <td><a href="/products?action=view&id=${product.idProduct}">${product.nameProduct}</a></td>
+        <td><a href="/products?action=view&id=${product.getIdProduct()}">${product.nameProduct}</a></td>
         <td>${product.priceProduct}</td>
         <td>${product.facilitiesProduct}</td>
-        <td><a href="/products?action=edit&id=${product.idProduct}">edit</a></td>
-        <td><a href="/products?action=delete&id=${product.idProduct}">delete</a></td>
+        <td><a href="/products?action=edit&id=${product.getIdProduct()}">edit</a></td>
+        <td><a href="/products?action=delete&id=${product.getIdProduct()}">delete</a></td>
     </tr>
     </c:forEach>
 

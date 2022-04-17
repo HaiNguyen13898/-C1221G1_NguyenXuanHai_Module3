@@ -18,15 +18,15 @@
 <table border="1">
     <tr>
         <td>Name: </td>
-        <td>${"product".nameProduct}</td>
+        <td>${product.nameProduct}</td>
     </tr>
     <tr>
         <td> Price: </td>
-        <td>${"product".priceProduct}</td>
+        <td>${product.priceProduct}</td>
     </tr>
     <tr>
         <td> Manufacturer: </td>
-        <td>${"product".facilitiesProduct}</td>
+        <td>${product.facilitiesProduct}</td>
     </tr>
 </table>
 </body>
