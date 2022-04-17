@@ -9,18 +9,18 @@ public class Product {
     public Product() {
     }
 
-    public Product(Integer idProduct, String nameProduct, Double priceProduct, String facilitiesProduct) {
+    public Product(int idProduct, String nameProduct, Double priceProduct, String facilitiesProduct) {
         this.idProduct = idProduct;
         this.nameProduct = nameProduct;
         this.priceProduct = priceProduct;
         this.facilitiesProduct = facilitiesProduct;
     }
 
-    public Integer getIdProduct() {
+    public int getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(Integer idProduct) {
+    public void setIdProduct(int idProduct) {
         this.idProduct = idProduct;
     }
 

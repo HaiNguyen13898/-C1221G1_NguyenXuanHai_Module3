@@ -57,7 +57,6 @@ public class ProductServlet extends HttpServlet {
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         Integer id = Integer.parseInt(request.getParameter("id"));
         Product product = productService.findById(id);
-        request.setAttribute("product", product);
         RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
