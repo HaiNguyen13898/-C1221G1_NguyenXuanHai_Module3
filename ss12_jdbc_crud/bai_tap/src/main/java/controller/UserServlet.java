@@ -26,7 +26,6 @@ public class UserServlet extends HttpServlet {
         switch (action) {
             case "create":
                 showNewForm(request, response);
-
                 break;
             case "edit":
                 showEditForm(request, response);
@@ -34,6 +33,8 @@ public class UserServlet extends HttpServlet {
             case "delete":
                 deleteUser(request, response);
                 break;
+            case "search":
+                searchUser(request,response);
             default:
                 listUser(request, response);
                 break;
@@ -147,12 +148,26 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        List<User> listUser = userService.selectAllUsers();
-        request.setAttribute("listUser", listUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        List<User> userList = userService.selectAllUsers();
+        request.setAttribute("userList", userList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/list.jsp");
         try {
-            dispatcher.forward(request, response);
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void searchUser (HttpServletRequest request, HttpServletResponse response) {
+        String searchCountry = request.getParameter("searchCountry");
+        List<User> userList = userService.searchUser(searchCountry);
+        request.setAttribute("userList", userList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/list.jsp");
+        try {
+            requestDispatcher.forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

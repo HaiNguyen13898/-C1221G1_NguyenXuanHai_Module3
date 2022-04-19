@@ -11,22 +11,21 @@
     <title>$Title$</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-case.css">
 </head>
 <body>
 <!-- As a link -->
-<nav class="navbar navbar-light bg-light" style="border: black">
+<nav class="navbar navbar-light bg-light" >
     <!-- Just an image -->
-    <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="https://i.pinimg.com/originals/7b/a0/7a/7ba07a6b47d4341e7974d9aa07675efe.jpg" width="30"
-                 height="30" alt="">
+            <img src="https://wikiland.vn/wp-content/uploads/FuramaPhuQuoc/logo-furama-resort-phu-quoc.png" width="200px"
+                 alt="">
         </a>
-    </nav>
 
     <p>NGUYỄN XUÂN HẢI</p>
 </nav>
 <!-- As a heading -->
-<nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light " >
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +35,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Employee<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Customer<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Service<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contract<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

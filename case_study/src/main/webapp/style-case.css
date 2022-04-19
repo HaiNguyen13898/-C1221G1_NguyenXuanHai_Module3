@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav.navbar.navbar-light.bg-light {
+    padding: 0px 0px 5px 0px;
+
+}
+
+p {
+    padding-right: 10px;
+}
