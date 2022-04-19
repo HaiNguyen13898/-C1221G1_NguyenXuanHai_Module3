@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfeea0d3-7b9b-4966-af3a-cd7694a78320" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/webapp/style-case.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/java/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/java/repository/IUserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/webapp/user/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/webapp/user/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss13/bai_tap/src/main/webapp/user/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss7_thiet_ke_bo_cuc_trang_web/bai_tap/web_anime/.idea/web_anime.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/build/libs/accountName_wbe-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/build/libs/accountName_wbe-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/repository/impl/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/build/classes/java/main/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/build/libs/update_user-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/build/libs/update_user-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/src/main/java/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai_tap/src/main/webapp/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_tap/src/main/webapp/user/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dfeea0d3-7b9b-4966-af3a-cd7694a78320" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../case_study" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
@@ -193,7 +148,7 @@
       <workItem from="1650292121011" duration="759000" />
       <workItem from="1650299589841" duration="3513000" />
       <workItem from="1650330966272" duration="159000" />
-      <workItem from="1650359172891" duration="927000" />
+      <workItem from="1650359172891" duration="1081000" />
     </task>
     <servers />
   </component>

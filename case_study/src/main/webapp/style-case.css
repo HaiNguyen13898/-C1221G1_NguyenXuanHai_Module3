@@ -14,3 +14,11 @@ nav.navbar.navbar-light.bg-light {
 p {
     padding-right: 10px;
 }
+
+nav.navbar.navbar-light {
+    background-color: aliceblue;
+}
+
+.sidebar-sticky.left-body {
+    float: left;
+}
