@@ -160,7 +160,6 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-
     private void searchUser (HttpServletRequest request, HttpServletResponse response) {
         String searchCountry = request.getParameter("searchCountry");
         List<User> userList = userService.searchUser(searchCountry);

@@ -6,19 +6,24 @@
     text-decoration: none;
 }
 
-nav.navbar.navbar-light.bg-light {
-    padding: 0px 0px 5px 0px;
-
-}
-
 p {
-    padding-right: 10px;
+    margin-right: 20px;
 }
 
-nav.navbar.navbar-light {
-    background-color: aliceblue;
-}
-
-.sidebar-sticky.left-body {
+.content {
     float: left;
+    height: 400px;
+}
+.sidebar {
+    float: left;
+    height: 400px;
+}
+
+.footer {
+    clear: both;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }

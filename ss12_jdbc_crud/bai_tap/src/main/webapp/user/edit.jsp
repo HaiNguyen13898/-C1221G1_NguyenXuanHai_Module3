@@ -32,9 +32,7 @@
             <tr>
                 <th>User Name:</th>
                 <td>
-                    <input type="text" name="name" size="45"
-                           value="<c:out value='${user.name}' />"
-                    />
+                    <input type="text" name="name" size="45" value="<c:out value='${user.name}' />"/>
                 </td>
             </tr>
             <tr>

@@ -22,7 +22,6 @@
         <input type="text" name="searchCountry">
         <button type="submit">Search</button>
     </form>
-
     <h2>
         <a href="/users?action=create">Create user</a>
     </h2>

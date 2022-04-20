@@ -64,6 +64,25 @@ primary key (ma_khach_hang),
 foreign key (ma_loai_khach) references loai_khach (ma_loai_khach)
 );
 
+create table nguoi_dung (
+ten_nguoi_dung varchar (255),
+mat_khau varchar (255),
+primary key (ten_nguoi_dung)
+);
+
+create table vai_tro (
+ma_vai_tro int,
+ten_vai_tro varchar (255),
+primary key (ma_vai_tro)
+);
+
+create table vai_tro_nguoi_dung (
+ma_vai_tro int,
+ten_nguoi_dung varchar (255),
+primary key (ma_vai_tro, ten_nguoi_dung),
+foreign key (ma_vai_tro) references vai_tro (ma_vai_tro),
+foreign key (ten_nguoi_dung) references nguoi_dung (ten_nguoi_dung)
+);
 
 create table nhan_vien (
 ma_nhan_vien int auto_increment not null,
@@ -77,10 +96,13 @@ dia_chi varchar (45),
 ma_vi_tri int not null,
 ma_trinh_do int not null,
 ma_bo_phan int not null,
+ten_nguoi_dung varchar (255),
 primary key (ma_nhan_vien),
 foreign key (ma_vi_tri) references vi_tri (ma_vi_tri),
 foreign key (ma_trinh_do) references trinh_do (ma_trinh_do),
-foreign key (ma_bo_phan) references bo_phan (ma_bo_phan)
+foreign key (ma_bo_phan) references bo_phan (ma_bo_phan),
+foreign key (ten_nguoi_dung) references nguoi_dung (ten_nguoi_dung)
+
 );
 
 create table dich_vu (
@@ -124,7 +146,6 @@ primary key (ma_hop_dong_chi_tiet),
 foreign key (ma_hop_dong) references hop_dong (ma_hop_dong),
 foreign key (ma_dich_vu_di_kem) references dich_vu_di_kem (ma_dich_vu_di_kem)
 );
-
 
 
 
