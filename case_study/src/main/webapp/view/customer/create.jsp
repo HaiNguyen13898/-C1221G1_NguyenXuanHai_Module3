@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: T470s
@@ -5,16 +6,17 @@
   Time: 10:01 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Create customer</title>
 </head>
+<body>
 <center>
     <h1>Customer management</h1>
     <a href="/customers">Back to customer list</a>
 </center>
-<body>
 <div align="center">
     <form method="post">
         <table border="1" cellpadding="5">
@@ -66,12 +68,10 @@
             <tr>
                 <th>Customer type: </th>
                 <td>
-                    <select name="ma_loai_khach">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                    <select name="customerType">
+                        <c:forEach var="customerType" items="${customerTypeList}">
+                            <option value="${customerType.getIdCustomerType()}">${customerType.getNameCustomerType()}</option>
+                        </c:forEach>
                     </select>
                 </td>
             </tr>

@@ -1,10 +1,14 @@
 package controller;
 
-import model.Customer;
-import repository.ICustomerRepository;
-import repository.impl.CustomerRepositoryImpl;
+import model.customer.Customer;
+import model.customer.CustomerType;
+import model.services.Services;
 import service.ICustomerService;
-import service.impl.CustomerServiceImpl;
+import service.ICustomerServiceType;
+import service.IServices;
+import service.impl.customer.CustomerServiceImpl;
+import service.impl.customer.CustomerTypeServiceImpl;
+import service.services.ServicesImpl;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,14 +20,14 @@ import java.util.List;
 @WebServlet(name = "CustomerController", value = "/customers")
 public class CustomerController extends HttpServlet {
 
-    //    private ICustomerRepository customerRepository = new CustomerRepositoryImpl();
     private ICustomerService customerService = new CustomerServiceImpl();
+    private ICustomerServiceType customerServiceType = new CustomerTypeServiceImpl();
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
-        System.out.println(action);
         if (action == null) {
             action = "";
         }
@@ -34,11 +38,10 @@ public class CustomerController extends HttpServlet {
             case "edit":
                 showEditForm(request, response);
                 break;
-            case "delete":
-//                deleteCustomer(request,response);
-                break;
+
             default:
                 listCustomer(request, response);
+                break;
         }
     }
 
@@ -57,6 +60,7 @@ public class CustomerController extends HttpServlet {
                 updateCustomer(request, response);
                 break;
             case "delete":
+                deleteCustomer(request, response);
                 break;
             default:
                 break;
@@ -66,7 +70,9 @@ public class CustomerController extends HttpServlet {
 
     private void listCustomer(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = customerService.selectAllCustomers();
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
         request.setAttribute("customerList", customerList);
+        request.setAttribute("customerTypeList", customerTypeList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -79,6 +85,16 @@ public class CustomerController extends HttpServlet {
 
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
+//        try {
+//            requestDispatcher.forward(request, response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -115,10 +131,13 @@ public class CustomerController extends HttpServlet {
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.selectCustomer(id);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
         request.setAttribute("customer", customer);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
+
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -126,6 +145,17 @@ public class CustomerController extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+//        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+//        request.setAttribute("customerTypeList",customerTypeList);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
+//        try {
+//            requestDispatcher.forward(request, response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
     }
 
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
@@ -162,10 +192,10 @@ public class CustomerController extends HttpServlet {
             e.printStackTrace();
         }
         List<Customer> customerList = customerService.selectAllCustomers();
-        request.setAttribute("customerList" ,customerList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
+        request.setAttribute("customerList", customerList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/list.jsp");
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

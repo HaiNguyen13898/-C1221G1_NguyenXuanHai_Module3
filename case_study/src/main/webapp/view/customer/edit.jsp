@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: T470s
@@ -6,6 +5,7 @@
   Time: 10:01 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,9 +26,9 @@
                     Edit customer
                 </h2>
             </caption>
-<%--            <c:if test="${customer != null}">--%>
-<%--                <input type="hidden" name="id" value="<c:out value='${customer.getMaKhachHang()}' />"/>--%>
-<%--            </c:if>--%>
+            <%--            <c:if test="${customer != null}">--%>
+            <%--                <input type="hidden" name="id" value="<c:out value='${customer.getMaKhachHang()}' />"/>--%>
+            <%--            </c:if>--%>
             <tr>
                 <th>Customer Name:</th>
                 <td>
@@ -79,15 +79,19 @@
                 </td>
             </tr>
             <tr>
-                <th>Customer type: </th>
+                <th>Customer type:</th>
                 <td>
-                    <select name="ma_loai_khach" value="<c:out value="${customer.getMaLoaiKhach()}"/>">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-
+<%--                                        <select name="ma_loai_khach" value="<c:out value="${customer.getMaLoaiKhach()}"/>">--%>
+<%--                                            <option value="1">Diamond</option>--%>
+<%--                                            <option value="2">Platinium</option>--%>
+<%--                                            <option value="3">Gold</option>--%>
+<%--                                            <option value="4">Silver</option>--%>
+<%--                                            <option value="5">Member</option>--%>
+<%--                                        </select>--%>
+                    <select name="ma_loai_khach">
+                            <c:forEach var="customerType" items="${customerTypeList}">
+                                <option value="${customerType.getIdCustomerType()}">${customerType.getNameCustomerType()}</option>
+                            </c:forEach>
                     </select>
                 </td>
             </tr>

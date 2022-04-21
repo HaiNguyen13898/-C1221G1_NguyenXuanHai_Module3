@@ -159,6 +159,26 @@ where year (ngay_lam_hop_dong) < '2021');
 set foreign_key_checks = on;
 set sql_safe_updates = 1;
 
+
+
+delimiter //
+create procedure delete_khach_hang ( in ma_kh int)
+begin 
+set sql_safe_updates = 0;
+set foreign_key_checks = off;
+delete from khach_hang where ma_khach_hang = ma_kh;
+set foreign_key_checks = on;
+set sql_safe_updates = 1;
+end //
+delimiter ; 
+
+call delete_khach_hang(3);
+call delete_khach_hang(6);
+call delete_khach_hang(5);
+call delete_khach_hang(7);
+call delete_khach_hang(8);
+call delete_khach_hang(9);
+
 -- task 19 cách 1
 set sql_safe_updates = 0;
 update dich_vu_di_kem set gia= gia*2 
