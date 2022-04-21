@@ -27,7 +27,6 @@
     </a>
     <p>NGUYỄN XUÂN HẢI</p>
 </nav>
-
 <nav class="navbar navbar-light ">
     <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

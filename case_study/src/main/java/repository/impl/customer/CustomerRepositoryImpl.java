@@ -2,7 +2,7 @@ package repository.impl.customer;
 
 import model.customer.Customer;
 import repository.BaseRepository;
-import repository.ICustomerRepository;
+import repository.interfaceRepository.customer.ICustomerRepository;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;

@@ -2,13 +2,10 @@ package controller;
 
 import model.customer.Customer;
 import model.customer.CustomerType;
-import model.services.Services;
-import service.ICustomerService;
-import service.ICustomerServiceType;
-import service.IServices;
+import service.interfaceCustomer.ICustomerService;
+import service.interfaceCustomer.ICustomerServiceType;
 import service.impl.customer.CustomerServiceImpl;
 import service.impl.customer.CustomerTypeServiceImpl;
-import service.services.ServicesImpl;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -110,8 +107,6 @@ public class CustomerController extends HttpServlet {
                 break;
         }
     }
-
-
 
 
     private void insertCustomer(HttpServletRequest request, HttpServletResponse response) {

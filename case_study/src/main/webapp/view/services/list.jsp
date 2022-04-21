@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: T470s
-  Date: 4/21/2022
-  Time: 9:36 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -25,7 +18,6 @@
     </a>
     <p>NGUYỄN XUÂN HẢI</p>
 </nav>
-
 <nav class="navbar navbar-light ">
     <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -92,15 +84,28 @@
             <td>${services.getDescriptionOtherConvenience()}</td>
             <td>${services. getPoolArea()}</td>
             <td>${services. getNumberFloor()}</td>
-            <td>${services. getIdRentType()}</td>
-            <td>${services. getIdServiceType()}</td>
+            <td>
+                <c:forEach var="rentType" items="${rentTypeList}">
+                    <c:if test="${services.getIdRentType() == rentType.getIdRentType()}">
+                        ${rentType.getNameRentType()}
+                    </c:if>
+                </c:forEach>
+
+                    <%--${services. getIdRentType()}--%>
+            </td>
+            <td>
+                <c:forEach var="serviceType" items="${serviceTypeList}">
+                    <c:if test="${services.getIdServiceType() == serviceType.getIdServiceType()}">
+                        ${serviceType.getNameServiceType()}
+                    </c:if>
+                </c:forEach>
+
+                    <%-- ${services. getIdServiceType()}--%>
+            </td>
         </tr>
 
     </c:forEach>
 </table>
-
-
-
 
 
 <script src="jquery/jquery-3.5.1.min.js"></script>

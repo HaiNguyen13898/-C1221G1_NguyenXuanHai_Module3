@@ -1,9 +1,8 @@
 package repository.impl.services;
 
-import model.customer.Customer;
 import model.services.Services;
 import repository.BaseRepository;
-import repository.IServicesRepository;
+import repository.interfaceRepository.service.IServicesRepository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +13,7 @@ import java.util.List;
 public class ServiceRepositoryImpl implements IServicesRepository {
 
 
-    private static final String SELECT_All_SERVICES = "select * from dich_vu order by ten_dich_vu";
+    private static final String SELECT_All_SERVICES = "select * from dich_vu;";
     private static final String INSERT_SERVICES_SQL = "INSERT INTO dich_vu ( ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang, ma_kieu_thue, ma_loai_dich_vu) VALUES (?,?,?,?,?,?,?,?,?,?)";
 
     BaseRepository baseRepository = new BaseRepository();
@@ -33,11 +32,6 @@ public class ServiceRepositoryImpl implements IServicesRepository {
         preparedStatement.setInt(9, services.getIdRentType());
         preparedStatement.setInt(10, services.getIdServiceType());
         preparedStatement.executeUpdate();
-    }
-
-    @Override
-    public Services selectService(int id) {
-        return null;
     }
 
     @Override
@@ -67,15 +61,4 @@ public class ServiceRepositoryImpl implements IServicesRepository {
         return servicesList;
     }
 
-
-
-    @Override
-    public void deleteService(int id) throws SQLException {
-
-    }
-
-    @Override
-    public void updateService(Services services) throws SQLException {
-
-    }
 }
