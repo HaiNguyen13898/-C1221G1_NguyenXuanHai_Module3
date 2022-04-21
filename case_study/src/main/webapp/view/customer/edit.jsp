@@ -10,8 +10,53 @@
 <html>
 <head>
     <title>Customer edit information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+
+<nav class="row navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://wikiland.vn/wp-content/uploads/FuramaPhuQuoc/logo-furama-resort-phu-quoc.png"
+             width="200px"
+             alt="">
+    </a>
+    <p>NGUYỄN XUÂN HẢI</p>
+</nav>
+
+<nav class="navbar navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://localhost:8080/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Employee<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/customers">Customer<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/services">Service<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contract<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
 <center>
     <h1>Customer Management</h1>
     <h2>
@@ -26,9 +71,9 @@
                     Edit customer
                 </h2>
             </caption>
-            <%--            <c:if test="${customer != null}">--%>
-            <%--                <input type="hidden" name="id" value="<c:out value='${customer.getMaKhachHang()}' />"/>--%>
-            <%--            </c:if>--%>
+                        <c:if test="${customer != null}">
+                            <input type="hidden" name="id" value="<c:out value='${customer.getMaKhachHang()}' />"/>
+                        </c:if>
             <tr>
                 <th>Customer Name:</th>
                 <td>
@@ -81,17 +126,10 @@
             <tr>
                 <th>Customer type:</th>
                 <td>
-<%--                                        <select name="ma_loai_khach" value="<c:out value="${customer.getMaLoaiKhach()}"/>">--%>
-<%--                                            <option value="1">Diamond</option>--%>
-<%--                                            <option value="2">Platinium</option>--%>
-<%--                                            <option value="3">Gold</option>--%>
-<%--                                            <option value="4">Silver</option>--%>
-<%--                                            <option value="5">Member</option>--%>
-<%--                                        </select>--%>
                     <select name="ma_loai_khach">
-                            <c:forEach var="customerType" items="${customerTypeList}">
-                                <option value="${customerType.getIdCustomerType()}">${customerType.getNameCustomerType()}</option>
-                            </c:forEach>
+                        <c:forEach var="customerType" items="${customerTypeList}">
+                            <option value=${customerType.getIdCustomerType()}>${customerType.getNameCustomerType()}</option>
+                        </c:forEach>
                     </select>
                 </td>
             </tr>
@@ -104,6 +142,14 @@
         </table>
     </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 
 </body>
 </html>

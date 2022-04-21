@@ -12,6 +12,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style-case.css">
+    <style>
+        .col-9.content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-image: url("https://1.bigdata-vn.com/wp-content/uploads/2021/10/NGAM-555-hinh-anh-mua-buon-dep-lang-man-mang.jpg");
+        }
+        .col-3.sidebar{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFr4WQHwyRI2-a6hXDKnhNJ9e8U1xH2_JDw&usqp=CAU");
+        }
+
+        iframe {
+            width: 80%;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
 <nav class="row navbar navbar-light bg-light">
@@ -32,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://localhost:8080/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Employee<span class="sr-only">(current)</span></a>
@@ -57,22 +74,19 @@
 </nav>
 
 <div class="col-3 sidebar">
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ul>
+
 </div>
-<div class="col-9 content ">
-hghghjghjggghjjggjjgjhjhj
+<div class="col-9 content">
+    <iframe src="https://www.youtube.com/embed/uUB7wnWeMdM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
 </div>
 
 <div class="footer">
-<p>@Hai</p>
+    <p>@Hai_Fail in love but will pass module</p>
 </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

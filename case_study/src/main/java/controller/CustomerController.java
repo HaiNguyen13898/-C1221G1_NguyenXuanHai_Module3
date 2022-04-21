@@ -23,7 +23,6 @@ public class CustomerController extends HttpServlet {
     private ICustomerService customerService = new CustomerServiceImpl();
     private ICustomerServiceType customerServiceType = new CustomerTypeServiceImpl();
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -38,12 +37,57 @@ public class CustomerController extends HttpServlet {
             case "edit":
                 showEditForm(request, response);
                 break;
-
             default:
                 listCustomer(request, response);
                 break;
         }
     }
+
+    private void listCustomer(HttpServletRequest request, HttpServletResponse response) {
+        List<Customer> customerList = customerService.selectAllCustomers();
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerList", customerList);
+        request.setAttribute("customerTypeList", customerTypeList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = customerService.selectCustomer(id);
+        request.setAttribute("customer", customer);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
+
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -68,42 +112,7 @@ public class CustomerController extends HttpServlet {
     }
 
 
-    private void listCustomer(HttpServletRequest request, HttpServletResponse response) {
-        List<Customer> customerList = customerService.selectAllCustomers();
-        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
-        request.setAttribute("customerList", customerList);
-        request.setAttribute("customerTypeList", customerTypeList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-
-    private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
-//        try {
-//            requestDispatcher.forward(request, response);
-//        } catch (ServletException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
-        request.setAttribute("customerTypeList", customerTypeList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private void insertCustomer(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("ho_ten");
@@ -130,33 +139,6 @@ public class CustomerController extends HttpServlet {
         }
     }
 
-    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
-        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
-        request.setAttribute("customerTypeList", customerTypeList);
-        int id = Integer.parseInt(request.getParameter("id"));
-        Customer customer = customerService.selectCustomer(id);
-        request.setAttribute("customer", customer);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
-
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-//        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
-//        request.setAttribute("customerTypeList",customerTypeList);
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
-//        try {
-//            requestDispatcher.forward(request, response);
-//        } catch (ServletException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-    }
 
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
