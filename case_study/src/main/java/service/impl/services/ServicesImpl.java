@@ -3,7 +3,7 @@ package service.impl.services;
 import model.services.Services;
 import repository.interfaceRepository.service.IServicesRepository;
 import repository.impl.services.ServiceRepositoryImpl;
-import service.interfaceService.IServices;
+import service.interfaceServices.service.IServices;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -3,7 +3,7 @@ package service.impl.customer;
 import model.customer.Customer;
 import repository.interfaceRepository.customer.ICustomerRepository;
 import repository.impl.customer.CustomerRepositoryImpl;
-import service.interfaceCustomer.ICustomerService;
+import service.interfaceServices.customer.ICustomerService;
 
 import java.sql.SQLException;
 import java.util.List;

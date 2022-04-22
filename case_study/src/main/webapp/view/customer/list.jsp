@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="bootstrap413/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="datatables/css/dataTables.bootstrap4.min.css"/>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -65,7 +64,9 @@
     <h2>
         <a href="/customers?action=create">Create customer </a>
     </h2>
+    <p>${message}</p>
 </center>
+
 
 <table class="table" id="tableCustomer" class="table table-striped table-bordered" style="width:100%">
     <thead class="thead-dark">

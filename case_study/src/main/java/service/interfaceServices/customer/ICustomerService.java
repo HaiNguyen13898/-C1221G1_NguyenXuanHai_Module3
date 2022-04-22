@@ -1,4 +1,4 @@
-package service.interfaceCustomer;
+package service.interfaceServices.customer;
 
 import model.customer.Customer;
 

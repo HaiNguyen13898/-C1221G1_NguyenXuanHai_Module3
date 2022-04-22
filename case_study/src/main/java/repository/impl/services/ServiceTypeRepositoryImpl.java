@@ -7,6 +7,7 @@ import repository.interfaceRepository.service.IServiceTypeRepository;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceTypeRepositoryImpl implements IServiceTypeRepository {
@@ -15,7 +16,7 @@ public class ServiceTypeRepositoryImpl implements IServiceTypeRepository {
 
     @Override
     public List<ServiceType> selectAllServiceType() {
-        List<ServiceType> serviceTypeList = null;
+        List<ServiceType> serviceTypeList = new ArrayList<>();
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = baseRepository.getConnectionJavaToDB().prepareStatement(SELECT_All_SERVICE_TYPE);

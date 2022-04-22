@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: T470s
-  Date: 4/20/2022
-  Time: 10:01 AM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -71,9 +65,7 @@
                     Edit customer
                 </h2>
             </caption>
-                        <c:if test="${customer != null}">
-                            <input type="hidden" name="id" value="<c:out value='${customer.getMaKhachHang()}' />"/>
-                        </c:if>
+
             <tr>
                 <th>Customer Name:</th>
                 <td>
@@ -127,9 +119,11 @@
                 <th>Customer type:</th>
                 <td>
                     <select name="ma_loai_khach">
+<%--                        cần giữ lại giá trị gốc khi qua eidt--%>
                         <c:forEach var="customerType" items="${customerTypeList}">
                             <option value=${customerType.getIdCustomerType()}>${customerType.getNameCustomerType()}</option>
                         </c:forEach>
+
                     </select>
                 </td>
             </tr>

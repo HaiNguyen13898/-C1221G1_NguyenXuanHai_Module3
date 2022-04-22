@@ -2,8 +2,8 @@ package controller;
 
 import model.customer.Customer;
 import model.customer.CustomerType;
-import service.interfaceCustomer.ICustomerService;
-import service.interfaceCustomer.ICustomerServiceType;
+import service.interfaceServices.customer.ICustomerService;
+import service.interfaceServices.customer.ICustomerServiceType;
 import service.impl.customer.CustomerServiceImpl;
 import service.impl.customer.CustomerTypeServiceImpl;
 
@@ -54,6 +54,7 @@ public class CustomerController extends HttpServlet {
             e.printStackTrace();
         }
     }
+
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
         List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
         request.setAttribute("customerTypeList", customerTypeList);
@@ -70,11 +71,11 @@ public class CustomerController extends HttpServlet {
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
         request.setAttribute("customerTypeList", customerTypeList);
+
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.selectCustomer(id);
         request.setAttribute("customer", customer);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
-
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -124,14 +125,8 @@ public class CustomerController extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        request.setAttribute("message", "Đã thêm mới thành công");
+        listCustomer(request, response);
     }
 
 
@@ -151,14 +146,8 @@ public class CustomerController extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        request.setAttribute("message", "Đã sửa thành công");
+        listCustomer(request, response);
     }
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {

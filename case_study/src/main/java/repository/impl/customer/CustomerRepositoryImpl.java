@@ -15,7 +15,6 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String INSERT_CUSTOMER_SQL = "insert into khach_hang ( ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi, ma_loai_khach) values (?,?,?,?,?,?,?,?);";
     private static final String SELECT_CUSTOMER_BY_ID = "select * from khach_hang where ma_khach_hang = ?";
     private static final String SELECT_All_CUSTOMER = "select * from khach_hang order by ho_ten";
-//    private static final String DELETE_CUSTOMER_SQL = "delete from khach_hang where ma_khach_hang = ?;";
     private static final String UPDATE_CUSTOMER_SQL = "update khach_hang set ho_ten = ?, ngay_sinh = ?, gioi_tinh = ?, so_cmnd = ?, so_dien_thoai = ?, email = ?, dia_chi = ?, ma_loai_khach = ? where ma_khach_hang = ?";
 
 
@@ -98,7 +97,6 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public void updateCustomer(Customer customer) throws SQLException {
-//        boolean rowUpdate;
         PreparedStatement preparedStatement = baseRepository.getConnectionJavaToDB().prepareStatement(UPDATE_CUSTOMER_SQL);
         preparedStatement.setString(1, customer.getHoTen());
         preparedStatement.setString(2, customer.getNgaySinh());
@@ -109,9 +107,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         preparedStatement.setString(7, customer.getDiaChi());
         preparedStatement.setInt(8, customer.getMaLoaiKhach());
         preparedStatement.setInt(9, customer.getMaKhachHang());
-
          preparedStatement.executeUpdate();
-//        return rowUpdate;
     }
 
     @Override

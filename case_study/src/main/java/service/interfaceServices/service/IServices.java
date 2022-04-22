@@ -1,6 +1,5 @@
-package service.interfaceService;
+package service.interfaceServices.service;
 
-import model.customer.Customer;
 import model.services.Services;
 
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package service.interfaceService;
+package service.interfaceServices.service;
 
 import model.services.RentType;
 

@@ -3,7 +3,7 @@ package service.impl.services;
 import model.services.RentType;
 import repository.impl.services.RentTypeRepositoryImpl;
 import repository.interfaceRepository.service.IRentTypeRepository;
-import service.interfaceService.IRentType;
+import service.interfaceServices.service.IRentType;
 
 import java.util.List;
 

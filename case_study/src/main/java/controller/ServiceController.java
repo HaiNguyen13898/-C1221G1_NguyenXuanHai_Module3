@@ -5,9 +5,9 @@ import model.services.ServiceType;
 import model.services.Services;
 import service.impl.services.RentTypeImpl;
 import service.impl.services.ServiceTypeImpl;
-import service.interfaceService.IRentType;
-import service.interfaceService.IServiceType;
-import service.interfaceService.IServices;
+import service.interfaceServices.service.IRentType;
+import service.interfaceServices.service.IServiceType;
+import service.interfaceServices.service.IServices;
 import service.impl.services.ServicesImpl;
 
 import javax.servlet.*;
@@ -69,11 +69,11 @@ public class ServiceController extends HttpServlet {
         List<Services> servicesList = services.selectAllService();
         request.setAttribute("servicesList", servicesList);
 
-//        List<RentType> rentTypeList = rentTypes.selectAllRentType();
-//        request.setAttribute("rentTypeList", rentTypeList);
-//
-//        List<ServiceType> serviceTypeList = serviceTypes.selectAllServiceType();
-//        request.setAttribute("serviceTypeList",serviceTypeList);
+        List<RentType> rentTypeList = rentTypes.selectAllRentType();
+        request.setAttribute("rentTypeList", rentTypeList);
+
+        List<ServiceType> serviceTypeList = serviceTypes.selectAllServiceType();
+        request.setAttribute("serviceTypeList",serviceTypeList);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/services/list.jsp");
         requestDispatcher.forward(request, response);
