@@ -32,8 +32,8 @@
         out.println("Word: " + search);
         out.println("Result: " + result);
     } else {
-        out.println("Not found");
-    }
+            out.println("Not found");
+        }
 %>
 
 

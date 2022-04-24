@@ -94,61 +94,87 @@
             <td>${employee.getPhoneNumber()}</td>
             <td>${employee.getEmail()}</td>
             <td>${employee.getAddress()}</td>
-            <td>${employee.getIdPosition()}</td>
-            <td>${employee.getIdEducationDegree()}</td>
-            <td>${employee.getIdDivision()}</td>
+
+            <td>
+                <c:forEach var="employeePosition" items="${positionList}">
+                    <c:if test="${employee.getIdPosition() == employeePosition.getIdPosition()}">
+                        ${employeePosition.getNamePosition()}
+                    </c:if>
+                </c:forEach>
+            </td>
+
+            <td>
+                <c:forEach var="employeeEducation" items="${educationList}">
+                    <c:if test="${employee.getIdEducationDegree() == employeeEducation.getIdEducationDegree()}">
+                        ${employeeEducation.getNameEducationDegree()}
+                    </c:if>
+                </c:forEach>
+            </td>
+
+            <td>
+                <c:forEach var="employeeDivison" items="${divisionList}">
+                    <c:if test="${employee.getIdDivision() == employeeDivison.getIdDivision()}">
+                        ${employeeDivison.getNameDivision()}
+                    </c:if>
+                </c:forEach>
+            </td>
+
             <td><a href="/employees?action=edit&id=${employee.getIdEmployee()}">Sửa</a></td>
-            <td>Xoá</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        onclick="deleteEmployee(${employee.getIdEmployee()},'${employee.getNameEmployee()}')">
+                    Xoá
+                </button>
+            </td>
         </tr>
 
     </c:forEach>
 </table>
 
 
-<%--<form action="/customers?action=delete" method="post">--%>
-<%--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--%>
-<%--         aria-hidden="true">--%>
-<%--        <div class="modal-dialog" role="document">--%>
-<%--            <div class="modal-content">--%>
-<%--                <div class="modal-header">--%>
-<%--                    <h5 class="modal-title" id="exampleModalLabel">Delete Customer</h5>--%>
-<%--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                        <span aria-hidden="true">&times;</span>--%>
-<%--                    </button>--%>
-<%--                </div>--%>
-<%--                <div class="modal-body">--%>
+<form action="/employees?action=delete" method="post">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="deleteEmployee">
+                    Are you sure about that?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 
-<%--                    <input type="hidden" name="id" id="deleteCustomer">--%>
-<%--                    Are you sure about that?--%>
-<%--                </div>--%>
-<%--                <div class="modal-footer">--%>
-<%--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--                    <button type="submit" class="btn btn-primary">Delete</button>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</form>--%>
 
+<script>
+    function deleteEmployee(id) {
+        document.getElementById("deleteEmployee").value = id;
+    }
+</script>
 
-<%--<script>--%>
-<%--    function deleteCustomer(id) {--%>
-<%--        document.getElementById("deleteCustomer").value = id;--%>
-<%--    }--%>
-<%--</script>--%>
-
-<%--<script src="jquery/jquery-3.5.1.min.js"></script>--%>
-<%--<script src="datatables/js/jquery.dataTables.min.js"></script>--%>
-<%--<script src="datatables/js/dataTables.bootstrap4.min.js"></script>--%>
-<%--<script>--%>
-<%--    $(document).ready(function () {--%>
-<%--        $('#tableCustomer').dataTable({--%>
-<%--            "dom": 'lrtip',--%>
-<%--            "lengthChange": false,--%>
-<%--            "pageLength": 5--%>
-<%--        });--%>
-<%--    });--%>
-<%--</script>--%>
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableCustomer').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5
+        });
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

@@ -172,6 +172,20 @@ set sql_safe_updates = 1;
 end //
 delimiter ; 
 
+delimiter //
+create procedure delete_nhan_vien ( in ma_nv int)
+begin 
+set sql_safe_updates = 0;
+set foreign_key_checks = off;
+delete from nhan_vien where ma_nhan_vien = ma_nv;
+set foreign_key_checks = on;
+set sql_safe_updates = 1;
+end //
+delimiter ; 
+
+call delete_nhan_vien(1);
+
+
 call delete_khach_hang(3);
 call delete_khach_hang(6);
 call delete_khach_hang(5);

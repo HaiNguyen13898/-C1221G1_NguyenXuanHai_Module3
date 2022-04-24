@@ -17,6 +17,6 @@ public interface ICustomerRepository {
 
     void updateCustomer(Customer customer) throws SQLException;
 
-    List<Customer> searchCustomer(String hoTen);
+    List<Customer> searchCustomer(String name, String email, int idCustomer) throws SQLException;
 
 }

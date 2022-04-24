@@ -23,6 +23,11 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
+    public List<Customer> searchCustomer(String name, String email, int idCustomer) throws SQLException {
+        return customerRepository.searchCustomer(name, email, idCustomer);
+    }
+
+    @Override
     public List<Customer> selectAllCustomers() {
         return customerRepository.selectAllCustomers();
     }
@@ -37,8 +42,4 @@ public class CustomerServiceImpl implements ICustomerService {
         customerRepository.updateCustomer(customer);
     }
 
-    @Override
-    public List<Customer> searchCustomer(String hoTen) {
-        return null;
-    }
 }

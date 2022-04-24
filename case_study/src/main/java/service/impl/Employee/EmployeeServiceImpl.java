@@ -2,7 +2,7 @@ package service.impl.Employee;
 
 import model.customer.Customer;
 import model.employee.Employee;
-import repository.impl.employee.EmployeeRepository;
+import repository.impl.employee.EmployeeRepositoryImpl;
 import repository.interfaceRepository.employee.IEmployeeRepository;
 import service.interfaceServices.employee.IEmployee;
 
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployee {
 
-    IEmployeeRepository employeeRepository = new EmployeeRepository();
+    IEmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
     @Override
     public List<Employee> selectAllEmployee() {
         return employeeRepository.selectAllEmployee();
@@ -24,7 +24,7 @@ public class EmployeeServiceImpl implements IEmployee {
 
     @Override
     public void deleteEmployee(int id) throws SQLException {
-
+        employeeRepository.deleteEmployee(id);
     }
 
     @Override
@@ -34,10 +34,8 @@ public class EmployeeServiceImpl implements IEmployee {
 
     @Override
     public Employee selectEmployee(int id) {
-        return null;
+        return employeeRepository.selectEmployee(id);
     }
-
-
 
     @Override
     public List<Customer> searchCustomer(String hoTen) {

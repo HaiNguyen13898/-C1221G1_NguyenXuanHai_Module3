@@ -12,6 +12,6 @@ public interface ICustomerService {
     void deleteCustomer(int id) throws SQLException;
     void updateCustomer(Customer customer) throws SQLException;
     Customer selectCustomer(int id);
-    List<Customer> searchCustomer(String hoTen);
+    List<Customer> searchCustomer(String name, String email, int idCustomer) throws SQLException;
 
 }

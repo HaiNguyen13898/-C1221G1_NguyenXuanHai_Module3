@@ -16,7 +16,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String SELECT_CUSTOMER_BY_ID = "select * from khach_hang where ma_khach_hang = ?";
     private static final String SELECT_All_CUSTOMER = "select * from khach_hang order by ho_ten";
     private static final String UPDATE_CUSTOMER_SQL = "update khach_hang set ho_ten = ?, ngay_sinh = ?, gioi_tinh = ?, so_cmnd = ?, so_dien_thoai = ?, email = ?, dia_chi = ?, ma_loai_khach = ? where ma_khach_hang = ?";
-
+    private static final String SEARCH_CUSTOMER = "select * from khach_hang where ho_ten like ? and email like ? and ma_loai_khach like ?;";
 
     BaseRepository baseRepository = new BaseRepository();
 
@@ -89,7 +89,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     @Override
     public void deleteCustomer(int id) throws SQLException {
         String delete = "call delete_khach_hang(?)";
-        CallableStatement  callableStatement = baseRepository.getConnectionJavaToDB().prepareCall(delete);
+        CallableStatement callableStatement = baseRepository.getConnectionJavaToDB().prepareCall(delete);
         callableStatement.setInt(1, id);
         callableStatement.executeUpdate();
 
@@ -107,11 +107,29 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         preparedStatement.setString(7, customer.getDiaChi());
         preparedStatement.setInt(8, customer.getMaLoaiKhach());
         preparedStatement.setInt(9, customer.getMaKhachHang());
-         preparedStatement.executeUpdate();
+        preparedStatement.executeUpdate();
     }
 
     @Override
-    public List<Customer> searchCustomer(String country) {
-        return null;
+    public List<Customer> searchCustomer(String name, String email, int idCustomer) throws SQLException {
+        List<Customer> customerList = new ArrayList<>();
+        PreparedStatement preparedStatement = this.baseRepository.getConnectionJavaToDB().prepareStatement(SEARCH_CUSTOMER);
+        preparedStatement.setString(1, "%" + name + "%");
+        preparedStatement.setString(2, "%" + email + "%");
+        preparedStatement.setString(3, "%" + idCustomer + "%");
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+            int maKhachHang = rs.getInt("ma_khach_hang");
+            String hoTen = rs.getString("ho_ten");
+            String ngaySinh = rs.getString("ngay_sinh");
+            int gioiTinh = rs.getInt("gioi_tinh");
+            String cmnd = rs.getString("so_cmnd");
+            String dienThoai = rs.getString("so_dien_thoai");
+            String emailCustomer = rs.getString("email");
+            String diaChi = rs.getString("dia_chi");
+            int maLoaiKhach = rs.getInt("ma_loai_khach");
+            customerList.add(new Customer(maKhachHang, hoTen, ngaySinh, gioiTinh, cmnd, dienThoai, emailCustomer, diaChi, maLoaiKhach));
+        }
+        return customerList;
     }
 }

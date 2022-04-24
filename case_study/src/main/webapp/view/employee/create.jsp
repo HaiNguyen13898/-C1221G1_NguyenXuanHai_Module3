@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -62,63 +61,79 @@
                 <h2>Create Employee</h2>
             </caption>
             <tr>
-                <th>Họ tên nhân viên: </th>
+                <th>Họ tên nhân viên:</th>
                 <td>
-                    <input type="text" name="ho_ten"  size="45"/>
+                    <input type="text" name="ho_ten" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Ngày sinh: </th>
+                <th>Ngày sinh:</th>
                 <td>
-                    <input type="date" name="ngay_sinh"  size="45"/>
+                    <input type="date" name="ngay_sinh" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Số cmnd: </th>
+                <th>Số cmnd:</th>
                 <td>
-                    <input type="text"  name="so_cmnd" size="45">
+                    <input type="text" name="so_cmnd" size="45">
                 </td>
             </tr>
             <tr>
-                <th>Lương: </th>
+                <th>Lương:</th>
                 <td>
-                    <input type="text" name="luong"  size="45"/>
+                    <input type="text" name="luong" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Số điện thoại: </th>
+                <th>Số điện thoại:</th>
                 <td>
-                    <input type="text" name="so_dien_thoai"  size="45"/>
+                    <input type="text" name="so_dien_thoai" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Email: </th>
+                <th>Email:</th>
                 <td>
                     <input type="text" name="email" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Địa chỉ: </th>
+                <th>Địa chỉ:</th>
                 <td>
                     <input type="text" name="dia_chi" size="45"/>
                 </td>
             </tr>
             <tr>
-                <th>Mã vị trí: </th>
+                <th>Mã vị trí:</th>
                 <td>
-                    <input type="text" name="ma_vi_tri"  size="45"/>
+                    <select name="ma_vi_tri">
+                        <c:forEach var="employeePosition" items="${positionList}">
+                            <option value="${employeePosition.getIdPosition()}">${employeePosition.getNamePosition()}</option>
+                        </c:forEach>
+                    </select>
                 </td>
             </tr>
             <tr>
-                <th>Mã trình độ: </th>
+                <th>Mã trình độ:</th>
                 <td>
-                    <input type="text" name="ma_trinh_do"  size="45"/>
+                    <select name="ma_trinh_do">
+                        <c:forEach var="employeEducation" items="${educationList}">
+                            <option
+                                    value="${employeEducation.getIdEducationDegree()}">${employeEducation.getNameEducationDegree()}
+                            </option>
+                        </c:forEach>
+                    </select>
                 </td>
+
+
             </tr>
             <tr>
-                <th>Mã bộ phận: </th>
+                <th>Mã bộ phận:</th>
                 <td>
-                    <input type="text" name="ma_bo_phan" size="45"/>
+                    <select name="ma_bo_phan">
+                        <c:forEach var="employeeDivision" items="${divisionList}">
+                            <option value="${employeeDivision.getIdDivision()}">${employeeDivision.getNameDivision()}</option>
+                        </c:forEach>
+                    </select>
                 </td>
             </tr>
             <tr>

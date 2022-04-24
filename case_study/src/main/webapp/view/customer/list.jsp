@@ -65,6 +65,19 @@
         <a href="/customers?action=create">Create customer </a>
     </h2>
     <p>${message}</p>
+
+    <form method="post" action="/customers?action=search">
+        <input type="text" name="name" placeholder="Input Customer Name: ">
+        <input type="text" name="email" placeholder="Input Customer Email: ">
+        <select name="id" >
+            <option value="">Chọn loại khách</option>
+            <c:forEach items="${customerTypeList}" var="customerType">
+                <option value="${customerType.getIdCustomerType()}">${customerType.getNameCustomerType()}</option>
+            </c:forEach>
+        </select>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
 </center>
 
 
@@ -117,7 +130,7 @@
 
             <td>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                        onclick="deleteCustomer(${customer.getMaKhachHang()},'${customer.getHoTen()}')">
+                        onclick="deleteCustomer(${customer.getMaKhachHang()})">
                     Xoá
                 </button>
             </td>
@@ -140,7 +153,6 @@
                     </button>
                 </div>
                 <div class="modal-body">
-
                     <input type="hidden" name="id"  id="deleteCustomer">
                     Are you sure about that?
                 </div>

@@ -11,8 +11,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Locale;
 
 @WebServlet(name = "CustomerController", value = "/customers")
 public class CustomerController extends HttpServlet {
@@ -104,6 +106,14 @@ public class CustomerController extends HttpServlet {
             case "delete":
                 deleteCustomer(request, response);
                 break;
+            case "search" :
+                PrintWriter writer = response.getWriter();
+                if (true) {
+                    search(request,response);
+                } else  {
+                    writer.println("Not found");
+                }
+
             default:
                 break;
         }
@@ -167,6 +177,21 @@ public class CustomerController extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    private void search (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name").toLowerCase();
+        String email = request.getParameter("email").toLowerCase();
+        int idCustomer = Integer.parseInt(request.getParameter("id"));
+        List<Customer> customerList = null;
+        try {
+            customerList = customerService.searchCustomer(name, email, idCustomer);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("customerList",customerList);
+        List<CustomerType> customerTypeList = customerServiceType.selectAllCustomerType();
+        request.setAttribute("customerTypeList" , customerTypeList);
+        request.getRequestDispatcher("/view/customer/list.jsp").forward(request,response);
     }
 }

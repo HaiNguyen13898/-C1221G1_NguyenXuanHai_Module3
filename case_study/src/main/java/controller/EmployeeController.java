@@ -3,8 +3,17 @@ package controller;
 import model.customer.Customer;
 import model.customer.CustomerType;
 import model.employee.Employee;
+import model.employee.EmployeeDivision;
+import model.employee.EmployeeEducationDegree;
+import model.employee.EmployeePosition;
+import service.impl.Employee.DivisionServiceImpl;
+import service.impl.Employee.EducationServiceImpl;
 import service.impl.Employee.EmployeeServiceImpl;
+import service.impl.Employee.PositionServiceImpl;
 import service.interfaceServices.employee.IEmployee;
+import service.interfaceServices.employee.IEmployeeDivision;
+import service.interfaceServices.employee.IEmployeeEducation;
+import service.interfaceServices.employee.IEmployeePosition;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -18,6 +27,9 @@ public class EmployeeController extends HttpServlet {
 
 
     private IEmployee employeeService = new EmployeeServiceImpl();
+    private IEmployeeDivision divisionService = new DivisionServiceImpl();
+    private IEmployeeEducation educationService = new EducationServiceImpl();
+    private IEmployeePosition positionService = new PositionServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -44,6 +56,17 @@ public class EmployeeController extends HttpServlet {
     private void listEmployee(HttpServletRequest request, HttpServletResponse response) {
         List<Employee> employeeList = employeeService.selectAllEmployee();
         request.setAttribute("employeeList", employeeList);
+
+        List<EmployeePosition> positionList = positionService.selectAllPosition();
+        request.setAttribute("positionList", positionList);
+
+        List<EmployeeEducationDegree> educationList = educationService.selectAllEducation();
+        request.setAttribute("educationList", educationList);
+
+        List<EmployeeDivision> divisionList = divisionService.selectAllDivision();
+        request.setAttribute("divisionList", divisionList);
+
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/list.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -55,8 +78,16 @@ public class EmployeeController extends HttpServlet {
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
-        List<Employee> employeeList = employeeService.selectAllEmployee();
-        request.setAttribute("employeeList", employeeList);
+        List<EmployeePosition> positionList = positionService.selectAllPosition();
+        request.setAttribute("positionList", positionList);
+
+        List<EmployeeEducationDegree> educationList = educationService.selectAllEducation();
+        request.setAttribute("educationList", educationList);
+
+        List<EmployeeDivision> divisionList = divisionService.selectAllDivision();
+        request.setAttribute("divisionList", divisionList);
+
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/create.jsp");
         try {
             requestDispatcher.forward(request, response);
@@ -69,6 +100,16 @@ public class EmployeeController extends HttpServlet {
 
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+
+        List<EmployeePosition> positionList = positionService.selectAllPosition();
+        request.setAttribute("positionList", positionList);
+
+        List<EmployeeEducationDegree> educationList = educationService.selectAllEducation();
+        request.setAttribute("educationList", educationList);
+
+        List<EmployeeDivision> divisionList = divisionService.selectAllDivision();
+        request.setAttribute("divisionList", divisionList);
+
         int id = Integer.parseInt(request.getParameter("id"));
         Employee employees = employeeService.selectEmployee(id);
         request.setAttribute("employees", employees);
@@ -99,6 +140,7 @@ public class EmployeeController extends HttpServlet {
                 updateEmployee(request, response);
                 break;
             case "delete":
+                deleteEmployee(request,response);
                 break;
             default:
                 break;
@@ -146,6 +188,26 @@ public class EmployeeController extends HttpServlet {
         }
         request.setAttribute("message", "Đã sửa thành công");
         listEmployee(request, response);
+    }
+
+
+    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        try {
+            employeeService.deleteEmployee(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        List<Employee> employeeList = employeeService.selectAllEmployee();
+        request.setAttribute("employeeList", employeeList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/employee/list.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
