@@ -45,8 +45,6 @@ public class EmployeeController extends HttpServlet {
             case "edit":
                 showEditForm(request, response);
                 break;
-            case "delete":
-                break;
             default:
                 listEmployee(request, response);
                 break;

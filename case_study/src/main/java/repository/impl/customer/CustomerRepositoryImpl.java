@@ -16,7 +16,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String SELECT_CUSTOMER_BY_ID = "select * from khach_hang where ma_khach_hang = ?";
     private static final String SELECT_All_CUSTOMER = "select * from khach_hang order by ho_ten";
     private static final String UPDATE_CUSTOMER_SQL = "update khach_hang set ho_ten = ?, ngay_sinh = ?, gioi_tinh = ?, so_cmnd = ?, so_dien_thoai = ?, email = ?, dia_chi = ?, ma_loai_khach = ? where ma_khach_hang = ?";
-    private static final String SEARCH_CUSTOMER = "select * from khach_hang where ho_ten like ? and email like ? and ma_loai_khach like ?;";
+    private static final String SEARCH_CUSTOMER = "select * from khach_hang where ho_ten like ? and (email like ? or ma_loai_khach like ?)";
 
     BaseRepository baseRepository = new BaseRepository();
 

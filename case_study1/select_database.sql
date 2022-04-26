@@ -182,7 +182,6 @@ set foreign_key_checks = on;
 set sql_safe_updates = 1;
 end //
 delimiter ; 
-
 call delete_nhan_vien(1);
 
 
@@ -236,7 +235,8 @@ update nhan_vien set dia_chi = 'Liên Chiểu' where ma_nhan_vien in
 (select ma_nhan_vien from (select ma_nhan_vien from v_nhan_vien) as x);
 set sql_safe_updates = 1;
 
-
+-- task 23 
+select * from khach_hang where ho_ten like 'Dương Văn Quan' and email like 'duongquan@gmail.com' and ma_loai_khach like 1;
 
 
 

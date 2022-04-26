@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 @WebServlet(name = "CustomerController", value = "/customers")
 public class CustomerController extends HttpServlet {
@@ -98,7 +99,11 @@ public class CustomerController extends HttpServlet {
         }
         switch (action) {
             case "create":
-                insertCustomer(request, response);
+                try {
+                    insertCustomer(request, response);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "edit":
                 updateCustomer(request, response);
@@ -120,7 +125,7 @@ public class CustomerController extends HttpServlet {
     }
 
 
-    private void insertCustomer(HttpServletRequest request, HttpServletResponse response) {
+    private void insertCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         String name = request.getParameter("ho_ten");
         String dateBirth = request.getParameter("ngay_sinh");
         int gender = Integer.parseInt(request.getParameter("gioi_tinh"));
@@ -130,13 +135,22 @@ public class CustomerController extends HttpServlet {
         String address = request.getParameter("dia_chi");
         int idTypeCustomer = Integer.parseInt(request.getParameter("ma_loai_khach"));
         Customer customer = new Customer(name, dateBirth, gender, idCards, phoneNumber, email, address, idTypeCustomer);
-        try {
-            customerService.insertCustomer(customer);
-        } catch (SQLException e) {
-            e.printStackTrace();
+//        try {
+//            customerService.insertCustomer(customer);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        Map<String, String> map = customerService.insertCustomer(customer);
+        if (map.isEmpty()) {
+            listCustomer(request,response);
+        } else {
+            List<CustomerType> customerTypeList=customerServiceType.selectAllCustomerType();
+            request.setAttribute("customerTypeList", customerTypeList);
+            request.setAttribute("error", map);
+            request.setAttribute("message", "Đã thêm mới thành công");
+            listCustomer(request, response);
         }
-        request.setAttribute("message", "Đã thêm mới thành công");
-        listCustomer(request, response);
     }
 
 

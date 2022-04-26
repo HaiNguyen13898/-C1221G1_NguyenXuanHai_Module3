@@ -17,7 +17,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     private static final String INSERT_EMPLOYEE_SQL = "insert into nhan_vien (ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi, ma_vi_tri, ma_trinh_do, ma_bo_phan) values (?,?,?,?,?,?,?,?,?,?)";
     private static final String SELECT_EMPLOYEE_BY_ID = "SELECT * FROM nhan_vien where ma_nhan_vien = ?;";
     private static final String SELECT_All_EMPLOYEE = "SELECT * FROM nhan_vien;";
-    private static final String DELETE_EMPLOYEE_SQL = "delete from nhan_vien where ma_nhan_vien = ?;";
+//    private static final String DELETE_EMPLOYEE_SQL = "delete from nhan_vien where ma_nhan_vien = ?;";
     private static final String UPDATE_EMPLOYEE_SQL = "update nhan_vien set ho_ten = ?, ngay_sinh = ?, so_cmnd = ?, luong = ?, so_dien_thoai = ?, email = ?, dia_chi = ?, ma_vi_tri = ?, ma_trinh_do = ?, ma_bo_phan = ? where ma_nhan_vien = ? " ;
 
     BaseRepository baseRepository = new BaseRepository();
@@ -66,13 +66,6 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
     }
 
-    @Override
-    public void deleteEmployee(int id) throws SQLException {
-        String delete = "call delete_nhan_vien(?);";
-        CallableStatement callableStatement = baseRepository.getConnectionJavaToDB().prepareCall(delete);
-        callableStatement.setInt(1,id);
-        callableStatement.executeUpdate();
-    }
 
     @Override
     public void updateEmployee(Employee employee) throws SQLException {
@@ -89,6 +82,16 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
         preparedStatement.setInt(10, employee.getIdDivision());
         preparedStatement.setInt(11, employee.getIdEmployee());
         preparedStatement.executeUpdate();
+    }
+
+
+
+    @Override
+    public void deleteEmployee(int id) throws SQLException {
+        String delete = "call delete_nhan_vien(?);";
+        CallableStatement callableStatement = baseRepository.getConnectionJavaToDB().prepareCall(delete);
+        callableStatement.setInt(1,id);
+        callableStatement.executeUpdate();
     }
 
     @Override
